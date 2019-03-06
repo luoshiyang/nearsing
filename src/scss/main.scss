@@ -1,0 +1,112 @@
+
+@import './config.scss';
+@import './base-mixin.scss';
+@import './index.scss';
+@import './iconfont.scss';
+
+html,body{
+    background-color: $pageBg;
+}
+
+//移除所有按钮focus状态的边框
+.btn{
+    &:focus,&:active:focus,.active:focus,.focus,&:active.focus,.active.focus{
+        outline: none; 
+    }
+}
+
+//固定宽度的容器
+.container.blue-content{
+    background-color: #fff;
+    margin-bottom:15px;
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+    padding: 0;
+    @extend .border-1px;
+}
+
+//主界面容器
+.content-wrapper{
+    width: $pageWidth;
+    box-sizing: border-box;
+    height: 100vh;
+    padding-top: 65px;
+    overflow: hidden;
+    position: relative;
+    margin:0 auto;
+    .col-md-10{
+        height: 100%;
+        iframe{
+            height: inherit;
+        }
+    }
+    .row{
+        margin: 0 !important;
+    }
+}
+
+.blue-padded-l-15{
+    padding-left: 15px;
+}
+.blue-padded-t-15{
+    padding-top: 15px;
+}
+.blue-padded-b-15{
+    padding-bottom: 15px;
+}
+.blue-padded-r-15{
+    padding-right: 15px;
+}
+.blue-padded-l-10{
+    padding-left: 10px;
+}
+.blue-padded-t-10{
+    padding-top: 10px;
+}
+.blue-padded-b-10{
+    padding-bottom: 10px;
+}
+.blue-padded-r-10{
+    padding-right: 10px;
+}
+.blue-padded-0{
+    padding: 0;
+}
+.blue-padded-l-0{
+    padding-left: 0px !important;
+}
+.blue-padded-t-0{
+    padding-top: 0px !important;
+}
+.blue-padded-b-0{
+    padding-bottom: 0px !important;
+}
+.blue-padded-r-0{
+    padding-right: 0px !important;
+}
+
+.nursing-s{
+    color: #F22035;
+}
+.nursing-1{
+    color: #F74883;
+}
+.nursing-2{
+    color: #F57B18;
+}
+.nursing-3{
+    color: #0259E1;
+}
+
+.blue-btn{
+    padding: 6px 24px;
+    &.btn-primary{
+        background-color: $main-color;
+        color: #ffffff;
+    }
+}
+
+.inline-text{
+    display: inline-block;
+}

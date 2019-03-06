@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>护理记录单列表</title>
+</head>
+<body>
+    <!--startprint-->
+    <style>
+        .tb-con th {
+            padding: 5px;
+            font-weight: normal;
+            border-left: 1px solid #CACED7;
+            background-color: #B9EAE5;
+            text-align: center;
+            width: 40px
+        }
+
+        .tb-con td:first-child {
+            border-left: 0;
+        }
+
+        .tb-con {
+            font-size: 12px;
+            font-weight: normal;
+            border: 1px solid #CACED7;
+            margin-top: 20px
+        }
+
+            .tb-con td {
+                border-left: 1px solid #CACED7;
+                border-top: 1px solid #CACED7;
+                padding: 5px;
+                text-align: center;
+                cursor: pointer
+            }
+
+            .tb-con tr:nth-child(2) th {
+                border-top: 1px solid #CACED7;
+            }
+
+            .tb-con .content {
+                max-width: 250px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+
+        .tb-title {
+            height: 40px;
+            line-height: 40px
+        }
+
+        .textbox {
+            margin-top: 0
+        }
+
+        td:last-child {
+            border-right: 1px solid #CACED7
+        }
+
+        .tb-con {
+            min-width: 842px
+        }
+
+        .title {
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold
+        }
+    </style>
+    <input type="button" value="Print this page" onclick="printpage()" />
+    <h1>这里不需要打印</h1>
+    <!--startprint-->
+    <table class="tb-con" id="crlhz" border="0" cellspacing="0" cellpadding="0" title="as">
+            <tbody><tr><th code="strDate" rowspan="2" style="width:80px">日期</th><th rowspan="2" code="strTime">时间</th><th rowspan="2" code="HeartRate">心率(次/分)</th><th rowspan="2" code="Temperature">体温(℃)</th><th rowspan="2" code="IsUsePacemaker">是否使用起搏器</th><th rowspan="2" code="IsUseRespirator">是否使用呼吸机</th><th rowspan="2" code="Observation">病情观察及措施</th><th rowspan="2" code="CoolType">降温方式</th><th rowspan="2" code="MeasureWay">测温方式</th><th rowspan="2" code="UnmeasuredCause">未测原因</th><th rowspan="2" code="Diastolic">舒张压(mmHg)</th><th rowspan="2" code="Systolic">收缩压(mmHg)</th><th rowspan="2" code="Pain">疼痛</th><th rowspan="2" code="Pulse">脉搏(次/分)</th><th rowspan="2" code="Breath">呼吸(次/分)</th><th rowspan="2" code="hxjpl">呼吸机频率(次/分)</th><th rowspan="2" code="xiyangfs">吸氧方式</th><th rowspan="2" code="tkgfyy">瞳孔光反应|右</th><th rowspan="2" code="tkgfyz">瞳孔光反应|左</th><th rowspan="2" code="tkdxy">瞳孔大小|右(mm)</th><th rowspan="2" code="tkdxz">瞳孔大小|左(mm)</th><th rowspan="2" code="ys">意识</th><th code="InUserName" rowspan="2">护士签名</th><th code="cz" rowspan="2">操作</th></tr>
+            <tr></tr>
+        <tr codeid="0"><td title="2019-03-01">2019-03-01</td><td title="16:05">16:05</td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title="沈军美">沈军美</td><td title="删除"><a href="javascript:;">删除</a></td></tr><tr codeid="1"><td title="2019-03-01">2019-03-01</td><td title="16:05">16:05</td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title="沈军美">沈军美</td><td title="删除"><a href="javascript:;">删除</a></td></tr><tr codeid="2"><td title="2019-03-01">2019-03-01</td><td title="16:05">16:05</td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title="沈军美">沈军美</td><td title="删除"><a href="javascript:;">删除</a></td></tr><tr codeid="3"><td title="2019-03-01">2019-03-01</td><td title="16:05">16:05</td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title="沈军美">沈军美</td><td title="删除"><a href="javascript:;">删除</a></td></tr><tr codeid="4"><td title="2019-03-01">2019-03-01</td><td title="16:05">16:05</td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title="沈军美">沈军美</td><td title="删除"><a href="javascript:;">删除</a></td></tr><tr codeid="5"><td title="2019-03-01">2019-03-01</td><td title="16:05">16:05</td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title="沈军美">沈军美</td><td title="删除"><a href="javascript:;">删除</a></td></tr><tr codeid="6"><td title="2019-03-01">2019-03-01</td><td title="16:05">16:05</td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title="沈军美">沈军美</td><td title="删除"><a href="javascript:;">删除</a></td></tr><tr codeid="7"><td title="2019-03-01">2019-03-01</td><td title="16:05">16:05</td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title="沈军美">沈军美</td><td title="删除"><a href="javascript:;">删除</a></td></tr><tr codeid="8"><td title="2019-03-01">2019-03-01</td><td title="16:05">16:05</td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title="沈军美">沈军美</td><td title="删除"><a href="javascript:;">删除</a></td></tr><tr codeid="9"><td title="2019-03-01">2019-03-01</td><td title="16:05">16:05</td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title="沈军美">沈军美</td><td title="删除"><a href="javascript:;">删除</a></td></tr><tr codeid="10"><td title="2019-03-01">2019-03-01</td><td title="16:05">16:05</td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title="沈军美">沈军美</td><td title="删除"><a href="javascript:;">删除</a></td></tr><tr codeid="11"><td title="2019-03-01">2019-03-01</td><td title="16:04">16:04</td><td title="36">36</td><td title="36">36</td><td title=""></td><td title=""></td><td title="遵医嘱予以耐药菌病例接触隔离，发放专用手消毒液，嘱家属接触患儿前后洗手，做好床旁隔离/单间隔离，发放感染性废物医疗垃圾袋，指导家属生活垃圾归入其中，挂接触隔离警示标志等耐药菌管理措施，病情继续观察。">遵医嘱予以耐药菌病例接触隔离，发放专用手消毒液，嘱家属接触患儿前后洗手，做好床旁隔离/单间隔离，发放感染性废物医疗垃圾袋，指导家属生活垃圾归入其中，挂接触隔离警示标志等耐药菌管理措施，病情继续观察。</td><td title=""></td><td title="腋温">腋温</td><td title=""></td><td title="80">80</td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title="沈军美">沈军美</td><td title="删除"><a href="javascript:;">删除</a></td></tr><tr codeid="12"><td title="2019-03-01">2019-03-01</td><td title="15:15">15:15</td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title="沈军美">沈军美</td><td title="删除"><a href="javascript:;">删除</a></td></tr><tr codeid="13"><td title="2019-03-01">2019-03-01</td><td title="15:15">15:15</td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title="沈军美">沈军美</td><td title="删除"><a href="javascript:;">删除</a></td></tr><tr codeid="14"><td title="2019-03-01">2019-03-01</td><td title="15:15">15:15</td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title="沈军美">沈军美</td><td title="删除"><a href="javascript:;">删除</a></td></tr><tr codeid="15"><td title="2019-03-01">2019-03-01</td><td title="15:13">15:13</td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title="沈军美">沈军美</td><td title="删除"><a href="javascript:;">删除</a></td></tr><tr codeid="16"><td title="2019-03-01">2019-03-01</td><td title="15:13">15:13</td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title="沈军美">沈军美</td><td title="删除"><a href="javascript:;">删除</a></td></tr><tr codeid="17"><td title="2019-03-01">2019-03-01</td><td title="15:13">15:13</td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title="沈军美">沈军美</td><td title="删除"><a href="javascript:;">删除</a></td></tr><tr codeid="18"><td title="2019-03-01">2019-03-01</td><td title="15:13">15:13</td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td>
+            <td title="">
+
+        </td><td title=""></td><td title="沈军美">沈军美</td><td title="删除"><a href="javascript:;">删除</a></td></tr><tr codeid="19"><td title="2019-03-01">2019-03-01</td><td title="15:13">15:13</td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title="沈军美">沈军美</td><td title="删除"><a href="javascript:;">删除</a></td></tr><tr codeid="20"><td title="2019-03-01">2019-03-01</td><td title="15:13">15:13</td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title="沈军美">沈军美</td><td title="删除"><a href="javascript:;">删除</a></td></tr><tr codeid="21"><td title="2019-03-01">2019-03-01</td><td title="15:13">15:13</td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title="沈军美">沈军美</td><td title="删除"><a href="javascript:;">删除</a></td></tr><tr codeid="22"><td title="2019-03-01">2019-03-01</td><td title="15:13">15:13</td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title="沈军美">沈军美</td><td title="删除"><a href="javascript:;">删除</a></td></tr><tr codeid="23"><td title="2019-03-01">2019-03-01</td><td title="15:13">15:13</td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title="沈军美">沈军美</td><td title="删除"><a href="javascript:;">删除</a></td></tr><tr codeid="24"><td title="2019-03-01">2019-03-01</td><td title="15:13">15:13</td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title=""></td><td title="沈军美">沈军美</td><td title="删除"><a href="javascript:;">删除</a></td></tr></tbody>
+    </table>
+    <!--endprint-->
+    <h1>这里不需要打印</h1>
+</body>
+<script type="text/javascript">
+    function printpage(){
+        bdhtml=window.document.body.innerHTML;   
+        sprnstr="<!--startprint-->";   
+        eprnstr="<!--endprint-->";   
+        prnhtml=bdhtml.substr(bdhtml.indexOf(sprnstr)+17);   
+        prnhtml=prnhtml.substring(0,prnhtml.indexOf(eprnstr));   
+        window.document.body.innerHTML=prnhtml;  
+        window.print();   
+    }
+</script>
+</html>

@@ -1,0 +1,79 @@
+@mixin circle-base($r,$fs) {
+    width: $r;
+    height: $r;
+    border-radius:50%;
+    text-align: center;
+    line-height: $r;
+    overflow: hidden;
+    vertical-align: middle;
+    span{
+        font-size: $fs;
+    }
+}
+//渐变配置
+@mixin grandient-bg($startColor,$endColor,$bgColor,$fontColor,$coorS,$coorE){
+    background: $bgColor;
+    background-image: -webkit-linear-gradient($coorS, $startColor, $endColor);
+    background-image: -moz-linear-gradient($coorS, $startColor, $endColor);
+    background-image: -ms-linear-gradient($coorS, $startColor, $endColor);
+    background-image: -o-linear-gradient($coorS, $startColor, $endColor);
+    background-image: linear-gradient(to $coorE, $startColor, $endColor);
+    color: $fontColor;
+}
+
+@mixin blue-header($height){
+    height: $height;
+    width: 100%;
+    line-height: $height;
+    position: relative;
+    background-color: #fff;
+    .title,.info{
+        display: inline-block;
+    }
+    .title{
+        color: $blue-color;
+        font-size: 16px;
+        padding-left: 30px;
+        &::before{
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            margin-top: -8px;
+            height: 16px;
+            width: 4px;
+            background-color: $blue-header-line;
+            content: "";
+        }
+    }
+    .info{
+        font-size: 14px;
+        color: $gray-text-color;
+        margin-left: 15px;
+    }
+    .right{
+        float: right;
+        padding-right: 15px;
+    }
+    @extend .border-bottom-1px;
+}
+
+//像素线配置
+.border-top-1px{
+    border-top: 1px solid $borderColor;
+}
+
+.border-right-1px{
+    border-right: 1px solid $borderColor;
+}
+
+.border-bottom-1px{
+    border-bottom: 1px solid $borderColor;
+}
+
+.border-left-1px{
+    border-left: 1px solid $borderColor;
+}
+
+.border-1px{
+    border: 1px solid $borderColor;
+}
