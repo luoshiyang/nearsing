@@ -15,6 +15,10 @@ html,body{
     }
 }
 
+.blue-content{
+    background-color:#FFF;
+}
+
 //固定宽度的容器
 .container.blue-content{
     background-color: #fff;
@@ -24,26 +28,6 @@ html,body{
     width: 100%;
     padding: 0;
     @extend .border-1px;
-}
-
-//主界面容器
-.content-wrapper{
-    width: $pageWidth;
-    box-sizing: border-box;
-    height: 100vh;
-    padding-top: 65px;
-    overflow: hidden;
-    position: relative;
-    margin:0 auto;
-    .col-md-10{
-        height: 100%;
-        iframe{
-            height: inherit;
-        }
-    }
-    .row{
-        margin: 0 !important;
-    }
 }
 
 .blue-padded-l-15{
