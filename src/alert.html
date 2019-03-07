@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>提示框</title>
+		<link rel="stylesheet" type="text/css" href="./css/bootstrap.css">
+		<style>
+			.alert{
+				width: 400px;
+				position: absolute;
+				top: 0;
+				transition: all linear .2s;
+			}
+			.alert-center{
+				left: 50%;
+				transform: translateX(-50%);
+			}
+			.alert-left{
+				left: 0;
+			}
+			.alert-right{
+				right: 0;
+			}
+		</style>
+	</head>
+	<body>
+		<button class="btn btn-default left">左</button>
+		<button class="btn btn-default center">居中</button>
+		<button class="btn btn-default right">右</button>
+	</body>
+</html>
+<script type="text/javascript" src="./js/jquery.1.10.2.js"></script>
+<script type="text/javascript" src="./js/bootstrap.js"></script>
+<script type="text/javascript" src="./js/lib/alert.js"></script>
+<script>
+	$(function(){
+		$(".left").click(function(){
+			$.danger("危险：","asdasd","left",2000);
+		})
+		$(".center").click(function(){
+			$.info("提示：","成功","center",300);
+		})
+		$(".right").click(function(){
+			$.warning("提示：","成功","right",1000);
+		})
+	})
+</script>
