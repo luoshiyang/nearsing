@@ -57,6 +57,61 @@
     @extend .border-bottom-1px;
 }
 
+//弹性盒子
+@mixin blue-box-content($horizontal,$vertical,$direction) {
+    display: flex;
+    display: -webkit-flex;
+    @if $direction == column {
+        flex-direction: column;
+        -webkit-flex-direction: column;
+    } @else if $direction == row {
+        flex-direction: row;
+        -webkit-flex-direction: row;
+    }
+    @if $horizontal == left {
+        justify-content: flex-start;
+        -webkit-justify-content: flex-start;
+    } @else if $horizontal == center {
+        justify-content: center;
+        -webkit-justify-content: center;
+    } @else if $horizontal == between {
+        justify-content: space-between;
+        -webkit-justify-content: space-between;
+    } @else if $horizontal == around {
+        justify-content: space-around;
+        -webkit-justify-content: space-around;
+    } @else if $horizontal == right {
+        justify-content: flex-end;
+        -webkit-justify-content: flex-end;
+    }
+    @if $vertical == top {
+        align-items: flex-start;
+        -webkit-align-items: flex-start;
+    } @else if $vertical == middle {
+        align-items: center;
+        -webkit-align-items: center;
+    } @else if $vertical == bottom {
+        justify-content: flex-end;
+        -webkit-justify-content: flex-end;
+    }
+}
+
+@mixin media-valiable($screen) {
+    @if $screen == lg {
+        @media screen and (max-width: 1200px) {
+            display: none;
+        }
+    } @else if $screen == md{
+        @media screen and (max-width: 992px) {
+            display: none;
+        }
+    } @else if $screen == sm{
+        @media screen and (max-width: 768px) {
+            display: none;
+        }
+    }
+}
+
 //像素线配置
 .border-top-1px{
     border-top: 1px solid $borderColor;

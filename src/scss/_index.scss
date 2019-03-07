@@ -2,6 +2,11 @@
 .nav-blue{
     background-color: $main-color;
     color: $white-color !important;
+    .navbar-header{
+        .navbar-brand{
+            margin-left: 0;
+        }
+    }
     .navbar-nav>li>a {
         color: $white-color !important;
     }
@@ -34,15 +39,35 @@
     @include grandient-bg(#FA5555,#E02121,#E02121,#ffffff,left top,right bottom);
 }
 
-#headerNav .media{
-    margin: 15px;
-    padding-left: 50px;
-    border-right: 1px solid $borderColor;
-    .media-body{
-        padding-top: 5px;
-    }
+//主界面容器
+.content-wrapper{
+    width: $pageWidth;
+    box-sizing: border-box;
+    height: 100vh;
+    padding-top: 65px;
+    overflow: hidden;
+    position: relative;
+    margin:0 auto;
+    @include blue-box-content(center,top,column);
 }
-#headerNav .row .col-md-3:last-child>.media{
+
+.header-nav {
+    .row{
+        padding: 0;
+        margin: 0;
+        &>div{
+            margin: 15px 0;
+            border-right: 1px solid $borderColor;
+            .header-item{
+                @include blue-box-content(center,middle,row);
+                .media-body{
+                    padding-top: 5px;
+                }
+            }
+        }
+    }
+} 
+.header-nav .row .col-md-3:last-child>.media{
     border: none;
 }
 
@@ -50,52 +75,63 @@
     position: relative;
     width: 100%;
     height: 100%;
+    @include blue-box-content(center,top,row);
     .panel-left{
-        float: left;
-        width: 985px;
+        width: 0;
+        flex:1;
+        -webkit-flex:1;
+        padding-right: 15px;
         height: inherit;
         position: relative;
-        overflow-x: hidden;
-        overflow-y: scroll;
+        overflow: hidden;
+        @include blue-box-content(start,middle,column);
+        .left-header{
+            @include blue-header(68px);
+            @extend .border-top-1px;
+            width: 100%;
+            .info{
+                @include media-valiable(md);
+            }
+            .right>button{
+                margin-left: 15px;
+                @include media-valiable(lg);
+            }
+        }
+        .left-body{
+            overflow-x: hidden;
+            overflow-y: scroll;
+        }
     }
     .panel-right{
-        float: right;
         width: 200px;
         height: inherit;
         position: relative;
-        overflow-x: hidden;
-        overflow-y: scroll;
+        overflow: hidden;
+        @include blue-box-content(start,middle,column);
+        .right-header{
+            @include blue-header(45px);
+            @extend .border-top-1px;
+            width: 198px;
+        }
+        .patient-info{
+            overflow-x: hidden;
+            overflow-y: scroll;
+        }
     }
-}
-
-.left-header{
-    @include blue-header(68px);
-    @extend .border-top-1px;
-    width: 983px;
-    position: fixed;
-    top:165px;
-    z-index: 99;
-}
-.right-header{
-    @include blue-header(45px);
-    @extend .border-top-1px;
-    width: 198px;
-    position: fixed;
-    top:165px;
-    z-index: 99;
 }
 
 .grid-list{
     width: 100%;
-    padding: 70px 7.5px 15px 7.5px;
+    padding: 0px 7.5px 15px 7.5px;
     box-sizing: border-box;
     height: auto;
     position: relative;
     overflow: hidden;
     .grid-list-item{
         background-color: #fff;
-        float: left;
-        width: 20%;
+        // float: left;
+        // width: 25%;
+        padding: 0;
         height: auto;
         margin-top: 15px;
         .grid-list-item-inner{
@@ -171,6 +207,9 @@
             .grid-list-item-text{
                 font-size: 14px;
                 color: $gray-middle-black-color;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
             }
             .grid-list-item-footer{
                 height: 32px;
@@ -180,16 +219,16 @@
                 @extend .border-left-1px;
                 @extend .border-right-1px;
                 @extend .border-bottom-1px;
-                .row .col-md-6:last-child{
-                    @extend .border-left-1px;
+                .row{
+                    padding:0;
+                    margin:0;
+                    .col-md-6:last-child{
+                        @extend .border-left-1px;
+                    }
                 }
             }
         }
     }
-}
-
-.patient-info{
-    padding-top: 40px;
 }
 
 .navbar-brand{

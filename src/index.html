@@ -13,7 +13,7 @@
 </head>
 <body>
     <nav class="navbar navbar-default navbar-fixed-top nav-blue">
-        <div class="container blue-padded-0">
+        <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
                 <a class="navbar-brand" href="#" id="brand">
@@ -52,356 +52,344 @@
             </div><!-- /.navbar-collapse -->
         </div>
     </nav>
-    <div class="content-wrapper">
-        <div style="position:relative">
-            <div class="container blue-content" id="headerNav" style="position: absolute;left:0;top:0;z-index: 10;">
-                <div class="row">
-                    <div class="col-md-3">
-                        <div class="media">
-                            <div class="media-left">
-                                <div class="circle-round-1">
-                                    <span class="iconfont iconall-member"></span>
-                                </div>
-                            </div>
-                            <div class="media-body text-left">
-                                <h4 class="media-heading">42</h4>
-                                总人数（人）
-                            </div>
+    <div class="container-fluid content-wrapper">
+        <div class="container blue-content header-nav" id="headerNav">
+            <div class="row">
+                <div class="col-lg-3 col-md-3 col-sm-6 col-sm-6">
+                    <div class="header-item">
+                        <div class="circle-round-1">
+                            <span class="iconfont iconall-member"></span>
+                        </div>
+                        <div class="text-left blue-padded-l-15">
+                            <h4 class="media-heading">42</h4>
+                            总人数（人）
                         </div>
                     </div>
-                    <div class="col-md-3">
-                        <div class="media">
-                            <div class="media-left">
-                                <div class="circle-round-2">
-                                    <span class="iconfont iconadd-member"></span>
-                                </div>
-                            </div>
-                            <div class="media-body text-left">
-                                <h4 class="media-heading">0</h4>
-                                新增（人）
-                            </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-sm-6">
+                    <div class="header-item">
+                        <div class="circle-round-2">
+                            <span class="iconfont iconall-member"></span>
+                        </div>
+                        <div class="text-left blue-padded-l-15">
+                            <h4 class="media-heading">42</h4>
+                            新增（人）
                         </div>
                     </div>
-                    <div class="col-md-3">
-                        <div class="media">
-                            <div class="media-left">
-                                <div class="circle-round-3">
-                                    <span class="iconfont iconsick-serious"></span>
-                                </div>
-                            </div>
-                            <div class="media-body text-left">
-                                <h4 class="media-heading">0</h4>
-                                病重（人）
-                            </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-sm-6">
+                    <div class="header-item">
+                        <div class="circle-round-3">
+                            <span class="iconfont iconall-member"></span>
+                        </div>
+                        <div class="text-left blue-padded-l-15">
+                            <h4 class="media-heading">42</h4>
+                            病重（人）
                         </div>
                     </div>
-                    <div class="col-md-3">
-                        <div class="media">
-                            <div class="media-left">
-                                <div class="circle-round-4">
-                                    <span class="iconfont iconsick-danger"></span>
-                                </div>
-                            </div>
-                            <div class="media-body text-left">
-                                <h4 class="media-heading">4</h4>
-                                病危（人）
-                            </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-sm-6">
+                    <div class="header-item">
+                        <div class="circle-round-4">
+                            <span class="iconfont iconall-member"></span>
+                        </div>
+                        <div class="text-left blue-padded-l-15">
+                            <h4 class="media-heading">42</h4>
+                            病危（人）
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="panel-wrapper"style="padding-top:100px;">
+        <div class="panel-wrapper">
             <div class="panel-left">
-                <div class="container blue-content">
-                    <div class="left-header">
-                        <div class="title">科室病人列表</div>
-                        <div class="info">特级护理：0人   一级护理：1人  二级护理：40人  三级护理：1人</div>
-                        <div class="right">
-                            <div class="btn-group blue-padded-r-15" role="group" id="tabGroup" aria-label="...">
-                                <button type="button" class="btn btn-default active">全科</button>
-                                <button type="button" class="btn btn-default">管床</button>
-                                <button type="button" class="btn btn-default">已出院</button>
-                            </div>
-                            <button type="button" class="btn btn-primary blue-btn">
-                                    <span class="glyphicon glyphicon-repeat blue-padded-r-10"></span>
-                                    刷新
-                            </button>
+                <div class="left-header">
+                    <div class="title">科室病人列表</div>
+                    <div class="info">特级护理：0人   一级护理：1人  二级护理：40人  三级护理：1人</div>
+                    <div class="right">
+                        <div class="btn-group" role="group" id="tabGroup" aria-label="...">
+                            <button type="button" class="btn btn-default active">全科</button>
+                            <button type="button" class="btn btn-default">管床</button>
+                            <button type="button" class="btn btn-default">已出院</button>
                         </div>
+                        <button type="button" class="btn btn-primary blue-btn">
+                                <span class="glyphicon glyphicon-repeat blue-padded-r-10"></span>
+                                刷新
+                        </button>
                     </div>
-                    <div class="blue-content">
-                        <div class="grid-list">
-                            <div class="grid-list-item">
-                                <div class="grid-list-item-inner">
-                                    <div class="container-fluid blue-content blue-padded-t-15 blue-padded-b-15">
-                                            <div class="grid-list-item-title">谭桂花<span class="iconfont iconfemale"></span></div>
-                                            <div class="grid-list-item-text">患病：升结肠肿瘤</div>
-                                            <div class="grid-list-item-text">医生：王晓宇</div>
-                                            <div class="grid-list-item-text">医保类别：自费</div>
-                                            <div class="grid-list-item-text">预交金额：7000元</div>
-                                    </div>
-                                    <div class="grid-list-item-footer">
-                                        <div class="row">
-                                            <div class="col-md-6  blue-padded-0">1号床</div>
-                                            <div class="col-md-6  blue-padded-0 nursing-2">二级护理</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="grid-list-item">
-                                <div class="grid-list-item-inner">
-                                    <div class="container-fluid blue-content blue-padded-t-15 blue-padded-b-15">
-                                        <div class="grid-list-item-title">谭桂花<span class="iconfont iconman"></span></div>
-                                        <div class="grid-list-item-text">患病：升结肠肿瘤</div>
-                                        <div class="grid-list-item-text">医生：王晓宇</div>
-                                        <div class="grid-list-item-text">医保类别：自费</div>
-                                        <div class="grid-list-item-text">预交金额：7000元</div>
-                                    </div>
-                                    <div class="grid-list-item-footer">
-                                        <div class="row">
-                                            <div class="col-md-6  blue-padded-0">1号床</div>
-                                            <div class="col-md-6  blue-padded-0 nursing-3">三级护理</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="grid-list-item">
-                                <!---blue-serious-label重病人标识-->
-                                <div class="grid-list-item-inner blue-serious-label">
-                                    <div class="container-fluid blue-content blue-padded-t-15 blue-padded-b-15">
+                </div>
+                <div class="blue-content left-body">
+                    <div class="grid-list">
+                        <div class="grid-list-item col-lg-2 col-md-3 col-sm-4 col-xs-12">
+                            <div class="grid-list-item-inner">
+                                <div class="container-fluid blue-content blue-padded-t-15 blue-padded-b-15">
                                         <div class="grid-list-item-title">谭桂花<span class="iconfont iconfemale"></span></div>
                                         <div class="grid-list-item-text">患病：升结肠肿瘤</div>
                                         <div class="grid-list-item-text">医生：王晓宇</div>
                                         <div class="grid-list-item-text">医保类别：自费</div>
                                         <div class="grid-list-item-text">预交金额：7000元</div>
-                                    </div>
-                                    <div class="grid-list-item-footer">
-                                        <div class="row">
-                                            <div class="col-md-6  blue-padded-0">1号床</div>
-                                            <div class="col-md-6  blue-padded-0 nursing-1">一级护理</div>
-                                        </div>
+                                </div>
+                                <div class="grid-list-item-footer">
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6  blue-padded-0">1号床</div>
+                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6  blue-padded-0 nursing-2">二级护理</div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="grid-list-item">
-                                <div class="grid-list-item-inner">
-                                    <div class="container-fluid blue-content blue-padded-t-15 blue-padded-b-15">
-                                        <div class="grid-list-item-title">谭桂花<span class="iconfont iconfemale"></span></div>
-                                        <div class="grid-list-item-text">患病：升结肠肿瘤</div>
-                                        <div class="grid-list-item-text">医生：王晓宇</div>
-                                        <div class="grid-list-item-text">医保类别：自费</div>
-                                        <div class="grid-list-item-text">预交金额：7000元</div>
-                                    </div>
-                                    <div class="grid-list-item-footer">
-                                        <div class="row">
-                                            <div class="col-md-6  blue-padded-0">1号床</div>
-                                            <div class="col-md-6  blue-padded-0 nursing-1">一级护理</div>
-                                        </div>
+                        </div>
+                        <div class="grid-list-item col-lg-2 col-md-3 col-sm-4 col-xs-12">
+                            <div class="grid-list-item-inner">
+                                <div class="container-fluid blue-content blue-padded-t-15 blue-padded-b-15">
+                                    <div class="grid-list-item-title">谭桂花<span class="iconfont iconman"></span></div>
+                                    <div class="grid-list-item-text">患病：升结肠肿瘤</div>
+                                    <div class="grid-list-item-text">医生：王晓宇</div>
+                                    <div class="grid-list-item-text">医保类别：自费</div>
+                                    <div class="grid-list-item-text">预交金额：7000元</div>
+                                </div>
+                                <div class="grid-list-item-footer">
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6  blue-padded-0">1号床</div>
+                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6  blue-padded-0 nursing-3">三级护理</div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="grid-list-item">
-                                <div class="grid-list-item-inner">
-                                    <div class="container-fluid blue-content blue-padded-t-15 blue-padded-b-15">
-                                        <div class="grid-list-item-title">谭桂花<span class="iconfont iconfemale"></span></div>
-                                        <div class="grid-list-item-text">患病：升结肠肿瘤</div>
-                                        <div class="grid-list-item-text">医生：王晓宇</div>
-                                        <div class="grid-list-item-text">医保类别：自费</div>
-                                        <div class="grid-list-item-text">预交金额：7000元</div>
-                                    </div>
-                                    <div class="grid-list-item-footer">
-                                        <div class="row">
-                                            <div class="col-md-6  blue-padded-0">1号床</div>
-                                            <div class="col-md-6  blue-padded-0 nursing-2">二级护理</div>
-                                        </div>
+                        </div>
+                        <div class="grid-list-item col-lg-2 col-md-3 col-sm-4 col-xs-12">
+                            <!---blue-serious-label重病人标识-->
+                            <div class="grid-list-item-inner blue-serious-label">
+                                <div class="container-fluid blue-content blue-padded-t-15 blue-padded-b-15">
+                                    <div class="grid-list-item-title">谭桂花<span class="iconfont iconfemale"></span></div>
+                                    <div class="grid-list-item-text">患病：升结肠肿瘤</div>
+                                    <div class="grid-list-item-text">医生：王晓宇</div>
+                                    <div class="grid-list-item-text">医保类别：自费</div>
+                                    <div class="grid-list-item-text">预交金额：7000元</div>
+                                </div>
+                                <div class="grid-list-item-footer">
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6  blue-padded-0">1号床</div>
+                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6  blue-padded-0 nursing-1">一级护理</div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="grid-list-item">
-                                <div class="grid-list-item-inner">
-                                    <div class="container-fluid blue-content blue-padded-t-15 blue-padded-b-15">
-                                        <div class="grid-list-item-title">谭桂花<span class="iconfont iconman"></span></div>
-                                        <div class="grid-list-item-text">患病：升结肠肿瘤</div>
-                                        <div class="grid-list-item-text">医生：王晓宇</div>
-                                        <div class="grid-list-item-text">医保类别：自费</div>
-                                        <div class="grid-list-item-text">预交金额：7000元</div>
-                                    </div>
-                                    <div class="grid-list-item-footer">
-                                        <div class="row">
-                                            <div class="col-md-6  blue-padded-0">1号床</div>
-                                            <div class="col-md-6  blue-padded-0 nursing-3">三级护理</div>
-                                        </div>
+                        </div>
+                        <div class="grid-list-item col-lg-2 col-md-3 col-sm-4 col-xs-12">
+                            <div class="grid-list-item-inner">
+                                <div class="container-fluid blue-content blue-padded-t-15 blue-padded-b-15">
+                                    <div class="grid-list-item-title">谭桂花<span class="iconfont iconfemale"></span></div>
+                                    <div class="grid-list-item-text">患病：升结肠肿瘤</div>
+                                    <div class="grid-list-item-text">医生：王晓宇</div>
+                                    <div class="grid-list-item-text">医保类别：自费</div>
+                                    <div class="grid-list-item-text">预交金额：7000元</div>
+                                </div>
+                                <div class="grid-list-item-footer">
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6  blue-padded-0">1号床</div>
+                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6  blue-padded-0 nursing-1">一级护理</div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="grid-list-item">
-                                <div class="grid-list-item-inner">
-                                    <div class="container-fluid blue-content blue-padded-t-15 blue-padded-b-15">
-                                        <div class="grid-list-item-title">谭桂花<span class="iconfont iconfemale"></span></div>
-                                        <div class="grid-list-item-text">患病：升结肠肿瘤</div>
-                                        <div class="grid-list-item-text">医生：王晓宇</div>
-                                        <div class="grid-list-item-text">医保类别：自费</div>
-                                        <div class="grid-list-item-text">预交金额：7000元</div>
-                                    </div>
-                                    <div class="grid-list-item-footer">
-                                        <div class="row">
-                                            <div class="col-md-6  blue-padded-0">1号床</div>
-                                            <div class="col-md-6  blue-padded-0 nursing-1">一级护理</div>
-                                        </div>
+                        </div>
+                        <div class="grid-list-item col-lg-2 col-md-3 col-sm-4 col-xs-12">
+                            <div class="grid-list-item-inner">
+                                <div class="container-fluid blue-content blue-padded-t-15 blue-padded-b-15">
+                                    <div class="grid-list-item-title">谭桂花<span class="iconfont iconfemale"></span></div>
+                                    <div class="grid-list-item-text">患病：升结肠肿瘤</div>
+                                    <div class="grid-list-item-text">医生：王晓宇</div>
+                                    <div class="grid-list-item-text">医保类别：自费</div>
+                                    <div class="grid-list-item-text">预交金额：7000元</div>
+                                </div>
+                                <div class="grid-list-item-footer">
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6  blue-padded-0">1号床</div>
+                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6  blue-padded-0 nursing-2">二级护理</div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="grid-list-item">
-                                <div class="grid-list-item-inner">
-                                    <div class="container-fluid blue-content blue-padded-t-15 blue-padded-b-15">
-                                        <div class="grid-list-item-title">谭桂花<span class="iconfont iconfemale"></span></div>
-                                        <div class="grid-list-item-text">患病：升结肠肿瘤</div>
-                                        <div class="grid-list-item-text">医生：王晓宇</div>
-                                        <div class="grid-list-item-text">医保类别：自费</div>
-                                        <div class="grid-list-item-text">预交金额：7000元</div>
-                                    </div>
-                                    <div class="grid-list-item-footer">
-                                        <div class="row">
-                                            <div class="col-md-6  blue-padded-0">1号床</div>
-                                            <div class="col-md-6  blue-padded-0 nursing-1">一级护理</div>
-                                        </div>
+                        </div>
+                        <div class="grid-list-item col-lg-2 col-md-3 col-sm-4 col-xs-12">
+                            <div class="grid-list-item-inner">
+                                <div class="container-fluid blue-content blue-padded-t-15 blue-padded-b-15">
+                                    <div class="grid-list-item-title">谭桂花<span class="iconfont iconman"></span></div>
+                                    <div class="grid-list-item-text">患病：升结肠肿瘤</div>
+                                    <div class="grid-list-item-text">医生：王晓宇</div>
+                                    <div class="grid-list-item-text">医保类别：自费</div>
+                                    <div class="grid-list-item-text">预交金额：7000元</div>
+                                </div>
+                                <div class="grid-list-item-footer">
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6  blue-padded-0">1号床</div>
+                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6  blue-padded-0 nursing-3">三级护理</div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="grid-list-item">
-                                <div class="grid-list-item-inner">
-                                    <div class="container-fluid blue-content blue-padded-t-15 blue-padded-b-15">
-                                        <div class="grid-list-item-title">谭桂花<span class="iconfont iconfemale"></span></div>
-                                        <div class="grid-list-item-text">患病：升结肠肿瘤</div>
-                                        <div class="grid-list-item-text">医生：王晓宇</div>
-                                        <div class="grid-list-item-text">医保类别：自费</div>
-                                        <div class="grid-list-item-text">预交金额：7000元</div>
-                                    </div>
-                                    <div class="grid-list-item-footer">
-                                        <div class="row">
-                                            <div class="col-md-6  blue-padded-0">1号床</div>
-                                            <div class="col-md-6  blue-padded-0 nursing-2">二级护理</div>
-                                        </div>
+                        </div>
+                        <div class="grid-list-item col-lg-2 col-md-3 col-sm-4 col-xs-12">
+                            <div class="grid-list-item-inner">
+                                <div class="container-fluid blue-content blue-padded-t-15 blue-padded-b-15">
+                                    <div class="grid-list-item-title">谭桂花<span class="iconfont iconfemale"></span></div>
+                                    <div class="grid-list-item-text">患病：升结肠肿瘤</div>
+                                    <div class="grid-list-item-text">医生：王晓宇</div>
+                                    <div class="grid-list-item-text">医保类别：自费</div>
+                                    <div class="grid-list-item-text">预交金额：7000元</div>
+                                </div>
+                                <div class="grid-list-item-footer">
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6  blue-padded-0">1号床</div>
+                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6  blue-padded-0 nursing-1">一级护理</div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="grid-list-item">
-                                <div class="grid-list-item-inner">
-                                    <div class="container-fluid blue-content blue-padded-t-15 blue-padded-b-15">
-                                        <div class="grid-list-item-title">谭桂花<span class="iconfont iconman"></span></div>
-                                        <div class="grid-list-item-text">患病：升结肠肿瘤</div>
-                                        <div class="grid-list-item-text">医生：王晓宇</div>
-                                        <div class="grid-list-item-text">医保类别：自费</div>
-                                        <div class="grid-list-item-text">预交金额：7000元</div>
-                                    </div>
-                                    <div class="grid-list-item-footer">
-                                        <div class="row">
-                                            <div class="col-md-6  blue-padded-0">1号床</div>
-                                            <div class="col-md-6  blue-padded-0 nursing-3">三级护理</div>
-                                        </div>
+                        </div>
+                        <div class="grid-list-item col-lg-2 col-md-3 col-sm-4 col-xs-12">
+                            <div class="grid-list-item-inner">
+                                <div class="container-fluid blue-content blue-padded-t-15 blue-padded-b-15">
+                                    <div class="grid-list-item-title">谭桂花<span class="iconfont iconfemale"></span></div>
+                                    <div class="grid-list-item-text">患病：升结肠肿瘤</div>
+                                    <div class="grid-list-item-text">医生：王晓宇</div>
+                                    <div class="grid-list-item-text">医保类别：自费</div>
+                                    <div class="grid-list-item-text">预交金额：7000元</div>
+                                </div>
+                                <div class="grid-list-item-footer">
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6  blue-padded-0">1号床</div>
+                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6  blue-padded-0 nursing-1">一级护理</div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="grid-list-item">
-                                <div class="grid-list-item-inner">
-                                    <div class="container-fluid blue-content blue-padded-t-15 blue-padded-b-15">
-                                        <div class="grid-list-item-title">谭桂花<span class="iconfont iconfemale"></span></div>
-                                        <div class="grid-list-item-text">患病：升结肠肿瘤</div>
-                                        <div class="grid-list-item-text">医生：王晓宇</div>
-                                        <div class="grid-list-item-text">医保类别：自费</div>
-                                        <div class="grid-list-item-text">预交金额：7000元</div>
-                                    </div>
-                                    <div class="grid-list-item-footer">
-                                        <div class="row">
-                                            <div class="col-md-6  blue-padded-0">1号床</div>
-                                            <div class="col-md-6  blue-padded-0 nursing-1">一级护理</div>
-                                        </div>
+                        </div>
+                        <div class="grid-list-item col-lg-2 col-md-3 col-sm-4 col-xs-12">
+                            <div class="grid-list-item-inner">
+                                <div class="container-fluid blue-content blue-padded-t-15 blue-padded-b-15">
+                                    <div class="grid-list-item-title">谭桂花<span class="iconfont iconfemale"></span></div>
+                                    <div class="grid-list-item-text">患病：升结肠肿瘤</div>
+                                    <div class="grid-list-item-text">医生：王晓宇</div>
+                                    <div class="grid-list-item-text">医保类别：自费</div>
+                                    <div class="grid-list-item-text">预交金额：7000元</div>
+                                </div>
+                                <div class="grid-list-item-footer">
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6  blue-padded-0">1号床</div>
+                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6  blue-padded-0 nursing-2">二级护理</div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="grid-list-item">
-                                <div class="grid-list-item-inner">
-                                    <div class="container-fluid blue-content blue-padded-t-15 blue-padded-b-15">
-                                        <div class="grid-list-item-title">谭桂花<span class="iconfont iconfemale"></span></div>
-                                        <div class="grid-list-item-text">患病：升结肠肿瘤</div>
-                                        <div class="grid-list-item-text">医生：王晓宇</div>
-                                        <div class="grid-list-item-text">医保类别：自费</div>
-                                        <div class="grid-list-item-text">预交金额：7000元</div>
-                                    </div>
-                                    <div class="grid-list-item-footer">
-                                        <div class="row">
-                                            <div class="col-md-6  blue-padded-0">1号床</div>
-                                            <div class="col-md-6  blue-padded-0 nursing-1">一级护理</div>
-                                        </div>
+                        </div>
+                        <div class="grid-list-item col-lg-2 col-md-3 col-sm-4 col-xs-12">
+                            <div class="grid-list-item-inner">
+                                <div class="container-fluid blue-content blue-padded-t-15 blue-padded-b-15">
+                                    <div class="grid-list-item-title">谭桂花<span class="iconfont iconman"></span></div>
+                                    <div class="grid-list-item-text">患病：升结肠肿瘤</div>
+                                    <div class="grid-list-item-text">医生：王晓宇</div>
+                                    <div class="grid-list-item-text">医保类别：自费</div>
+                                    <div class="grid-list-item-text">预交金额：7000元</div>
+                                </div>
+                                <div class="grid-list-item-footer">
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6  blue-padded-0">1号床</div>
+                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6  blue-padded-0 nursing-3">三级护理</div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="grid-list-item">
-                                <div class="grid-list-item-inner">
-                                    <div class="container-fluid blue-content blue-padded-t-15 blue-padded-b-15">
-                                        <div class="grid-list-item-title">谭桂花<span class="iconfont iconfemale"></span></div>
-                                        <div class="grid-list-item-text">患病：升结肠肿瘤</div>
-                                        <div class="grid-list-item-text">医生：王晓宇</div>
-                                        <div class="grid-list-item-text">医保类别：自费</div>
-                                        <div class="grid-list-item-text">预交金额：7000元</div>
-                                    </div>
-                                    <div class="grid-list-item-footer">
-                                        <div class="row">
-                                            <div class="col-md-6  blue-padded-0">1号床</div>
-                                            <div class="col-md-6  blue-padded-0 nursing-2">二级护理</div>
-                                        </div>
+                        </div>
+                        <div class="grid-list-item col-lg-2 col-md-3 col-sm-4 col-xs-12">
+                            <div class="grid-list-item-inner">
+                                <div class="container-fluid blue-content blue-padded-t-15 blue-padded-b-15">
+                                    <div class="grid-list-item-title">谭桂花<span class="iconfont iconfemale"></span></div>
+                                    <div class="grid-list-item-text">患病：升结肠肿瘤</div>
+                                    <div class="grid-list-item-text">医生：王晓宇</div>
+                                    <div class="grid-list-item-text">医保类别：自费</div>
+                                    <div class="grid-list-item-text">预交金额：7000元</div>
+                                </div>
+                                <div class="grid-list-item-footer">
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6  blue-padded-0">1号床</div>
+                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6  blue-padded-0 nursing-1">一级护理</div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="grid-list-item">
-                                <!---blue-serious-label危病人标识-->
-                                <div class="grid-list-item-inner blue-danger-label">
-                                    <div class="container-fluid blue-content blue-padded-t-15 blue-padded-b-15">
-                                        <div class="grid-list-item-title">谭桂花<span class="iconfont iconman"></span></div>
-                                        <div class="grid-list-item-text">患病：升结肠肿瘤</div>
-                                        <div class="grid-list-item-text">医生：王晓宇</div>
-                                        <div class="grid-list-item-text">医保类别：自费</div>
-                                        <div class="grid-list-item-text">预交金额：7000元</div>
-                                    </div>
-                                    <div class="grid-list-item-footer">
-                                        <div class="row">
-                                            <div class="col-md-6  blue-padded-0">1号床</div>
-                                            <div class="col-md-6  blue-padded-0 nursing-3">三级护理</div>
-                                        </div>
+                        </div>
+                        <div class="grid-list-item col-lg-2 col-md-3 col-sm-4 col-xs-12">
+                            <div class="grid-list-item-inner">
+                                <div class="container-fluid blue-content blue-padded-t-15 blue-padded-b-15">
+                                    <div class="grid-list-item-title">谭桂花<span class="iconfont iconfemale"></span></div>
+                                    <div class="grid-list-item-text">患病：升结肠肿瘤</div>
+                                    <div class="grid-list-item-text">医生：王晓宇</div>
+                                    <div class="grid-list-item-text">医保类别：自费</div>
+                                    <div class="grid-list-item-text">预交金额：7000元</div>
+                                </div>
+                                <div class="grid-list-item-footer">
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6  blue-padded-0">1号床</div>
+                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6  blue-padded-0 nursing-1">一级护理</div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="grid-list-item">
-                                <div class="grid-list-item-inner">
-                                    <div class="container-fluid blue-content blue-padded-t-15 blue-padded-b-15">
-                                        <div class="grid-list-item-title">谭桂花<span class="iconfont iconfemale"></span></div>
-                                        <div class="grid-list-item-text">患病：升结肠肿瘤</div>
-                                        <div class="grid-list-item-text">医生：王晓宇</div>
-                                        <div class="grid-list-item-text">医保类别：自费</div>
-                                        <div class="grid-list-item-text">预交金额：7000元</div>
-                                    </div>
-                                    <div class="grid-list-item-footer">
-                                        <div class="row">
-                                            <div class="col-md-6  blue-padded-0">1号床</div>
-                                            <div class="col-md-6  blue-padded-0 nursing-1">一级护理</div>
-                                        </div>
+                        </div>
+                        <div class="grid-list-item col-lg-2 col-md-3 col-sm-4 col-xs-12">
+                            <div class="grid-list-item-inner">
+                                <div class="container-fluid blue-content blue-padded-t-15 blue-padded-b-15">
+                                    <div class="grid-list-item-title">谭桂花<span class="iconfont iconfemale"></span></div>
+                                    <div class="grid-list-item-text">患病：升结肠肿瘤</div>
+                                    <div class="grid-list-item-text">医生：王晓宇</div>
+                                    <div class="grid-list-item-text">医保类别：自费</div>
+                                    <div class="grid-list-item-text">预交金额：7000元</div>
+                                </div>
+                                <div class="grid-list-item-footer">
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6  blue-padded-0">1号床</div>
+                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6  blue-padded-0 nursing-2">二级护理</div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="grid-list-item">
-                                <div class="grid-list-item-inner">
-                                    <div class="container-fluid blue-content blue-padded-t-15 blue-padded-b-15">
-                                        <div class="grid-list-item-title">谭桂花<span class="iconfont iconfemale"></span></div>
-                                        <div class="grid-list-item-text">患病：升结肠肿瘤</div>
-                                        <div class="grid-list-item-text">医生：王晓宇</div>
-                                        <div class="grid-list-item-text">医保类别：自费</div>
-                                        <div class="grid-list-item-text">预交金额：7000元</div>
+                        </div>
+                        <div class="grid-list-item col-lg-2 col-md-3 col-sm-4 col-xs-12">
+                            <!---blue-serious-label危病人标识-->
+                            <div class="grid-list-item-inner blue-danger-label">
+                                <div class="container-fluid blue-content blue-padded-t-15 blue-padded-b-15">
+                                    <div class="grid-list-item-title">谭桂花<span class="iconfont iconman"></span></div>
+                                    <div class="grid-list-item-text">患病：升结肠肿瘤</div>
+                                    <div class="grid-list-item-text">医生：王晓宇</div>
+                                    <div class="grid-list-item-text">医保类别：自费</div>
+                                    <div class="grid-list-item-text">预交金额：7000元</div>
+                                </div>
+                                <div class="grid-list-item-footer">
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6  blue-padded-0">1号床</div>
+                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6  blue-padded-0 nursing-3">三级护理</div>
                                     </div>
-                                    <div class="grid-list-item-footer">
-                                        <div class="row">
-                                            <div class="col-md-6  blue-padded-0">1号床</div>
-                                            <div class="col-md-6  blue-padded-0 nursing-1">一级护理</div>
-                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid-list-item col-lg-2 col-md-3 col-sm-4 col-xs-12">
+                            <div class="grid-list-item-inner">
+                                <div class="container-fluid blue-content blue-padded-t-15 blue-padded-b-15">
+                                    <div class="grid-list-item-title">谭桂花<span class="iconfont iconfemale"></span></div>
+                                    <div class="grid-list-item-text">患病：升结肠肿瘤</div>
+                                    <div class="grid-list-item-text">医生：王晓宇</div>
+                                    <div class="grid-list-item-text">医保类别：自费</div>
+                                    <div class="grid-list-item-text">预交金额：7000元</div>
+                                </div>
+                                <div class="grid-list-item-footer">
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6  blue-padded-0">1号床</div>
+                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6  blue-padded-0 nursing-1">一级护理</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid-list-item col-lg-2 col-md-3 col-sm-4 col-xs-12">
+                            <div class="grid-list-item-inner">
+                                <div class="container-fluid blue-content blue-padded-t-15 blue-padded-b-15">
+                                    <div class="grid-list-item-title">谭桂花<span class="iconfont iconfemale"></span></div>
+                                    <div class="grid-list-item-text">患病：升结肠肿瘤</div>
+                                    <div class="grid-list-item-text">医生：王晓宇</div>
+                                    <div class="grid-list-item-text">医保类别：自费</div>
+                                    <div class="grid-list-item-text">预交金额：7000元</div>
+                                </div>
+                                <div class="grid-list-item-footer">
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6  blue-padded-0">1号床</div>
+                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6  blue-padded-0 nursing-1">一级护理</div>
                                     </div>
                                 </div>
                             </div>
@@ -410,26 +398,24 @@
                 </div>
             </div>
             <div class="panel-right">
-                <div class="container blue-content">
-                    <div class="right-header">
-                        <div class="title">病人详情</div>
-                    </div>
-                    <div class="blue-content container-fluid patient-info">
-                        <div class="blue-padded-t-15">就诊卡号：1800858839</div>
-                        <div>姓名：谭桂花</div>
-                        <div>性别：女</div>
-                        <div class="blue-padded-b-15 border-bottom-1px">年龄：80岁</div>
-                        <div class="blue-padded-t-15">入院时间：2019-1-15</div>
-                        <div>诊断：创伤性硬脑膜外水肿</div>
-                        <div>临床科室：外一科</div>
-                        <div>主治医师：无</div>
-                        <div>护理等级：二级护理</div>
-                        <div class="blue-padded-b-15 border-bottom-1px">病情状态：无</div>
-                        <div class="blue-padded-t-15">医保类别：自费</div>
-                        <div>预缴金额：7000</div>
-                        <div>总费用：5134</div>
-                        <div class="blue-padded-b-15">医师嘱托：无</div>
-                    </div>
+                <div class="right-header">
+                    <div class="title">病人详情</div>
+                </div>
+                <div class="blue-content container-fluid patient-info">
+                    <div class="blue-padded-t-15">就诊卡号：1800858839</div>
+                    <div>姓名：谭桂花</div>
+                    <div>性别：女</div>
+                    <div class="blue-padded-b-15 border-bottom-1px">年龄：80岁</div>
+                    <div class="blue-padded-t-15">入院时间：2019-1-15</div>
+                    <div>诊断：创伤性硬脑膜外水肿</div>
+                    <div>临床科室：外一科</div>
+                    <div>主治医师：无</div>
+                    <div>护理等级：二级护理</div>
+                    <div class="blue-padded-b-15 border-bottom-1px">病情状态：无</div>
+                    <div class="blue-padded-t-15">医保类别：自费</div>
+                    <div>预缴金额：7000</div>
+                    <div>总费用：5134</div>
+                    <div class="blue-padded-b-15">医师嘱托：无</div>
                 </div>
             </div>
         </div>
