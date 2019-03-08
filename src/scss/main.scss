@@ -94,3 +94,19 @@ html,body{
 .inline-text{
     display: inline-block;
 }
+//浏览器版本不兼容时，弹出层样式
+#browserWrapper{
+    position: absolute;
+    left: 50%;
+    top: 35%;
+    margin-left: -20%;
+    width: 40%;
+    height: auto;
+    text-align: center;
+    z-index: 999;
+    .blue-browser-update{
+        margin-top: 15px;
+        text-align: center;
+        font-size: 18px;
+    }
+}
