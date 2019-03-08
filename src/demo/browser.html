@@ -11,7 +11,6 @@
 </head>
 <body onload="bro();">
     <div id="broType">浏览器名称&版本</div>
-    <div>您的浏览器版本过低，确保有更好的体验，请您安装chrome最新浏览器</div>
 </body>
 <script type="text/javascript">
     function bro() {
@@ -86,11 +85,11 @@
             broName = temp.replace('/', '版本号');
         }
 
-        if(isIE || is360){
+        if(isIE || is360 || isEdge){
             console.log('当前浏览器不兼容');
             var tag = document.body;
             var wrapper = document.createElement('div');
-            wrapper.innerHTML = '当前浏览器不兼容';
+            wrapper.innerHTML = '您的浏览器版本过低，确保有更好的体验，请您安装chrome最新浏览器';
             tag.appendChild(wrapper);
             return;
         }
