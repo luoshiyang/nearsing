@@ -22,7 +22,7 @@ gulp.task('bs',function(){
 });
 
 gulp.task('pagereload',function(){
-    bs.reload('./index.html');
+    bs.reload('./*.html');
 });
 
 gulp.task('watch',['bs','sass','pagereload'],function(){
