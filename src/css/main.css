@@ -399,6 +399,147 @@
 .iconman:before {
   content: "\e60a"; }
 
+@keyframes loadingBg {
+  0% {
+    background: rgba(0, 0, 0, 0); }
+  100% {
+    background: rgba(0, 0, 0, 0.5); } }
+
+@-webkit-keyframes loadingBg {
+  0% {
+    background: rgba(0, 0, 0, 0); }
+  100% {
+    background: rgba(0, 0, 0, 0.5); } }
+
+@keyframes loading {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+
+@-webkit-keyframes loading {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+
+@keyframes loadingDot {
+  0% {
+    content: ""; }
+  33% {
+    content: "."; }
+  66% {
+    content: ".."; }
+  100% {
+    content: "..."; } }
+
+@-webkit-keyframes loadingDot {
+  0% {
+    content: ""; }
+  33% {
+    content: "."; }
+  66% {
+    content: ".."; }
+  100% {
+    content: "..."; } }
+
+@keyframes loadingModal {
+  0% {
+    transform: translate(0, -50%);
+    opacity: 0; }
+  100% {
+    transform: translate(0, 0);
+    opacity: 1; } }
+
+@-webkit-keyframes loadingModal {
+  0% {
+    transform: translate(0, -50%);
+    opacity: 0; }
+  100% {
+    transform: translate(0, 0);
+    opacity: 1; } }
+
+.loading-wrapper {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1090;
+  background: rgba(0, 0, 0, 0);
+  text-align: center; }
+  .loading-wrapper .loading-wrap {
+    width: 180px;
+    height: 180px;
+    border-radius: 8px;
+    box-sizing: border-box;
+    background-color: #fff;
+    margin: 0 auto;
+    margin-top: 35vh;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: column;
+    -webkit-flex-direction: column;
+    justify-content: center;
+    -webkit-justify-content: center;
+    align-items: center;
+    -webkit-align-items: center; }
+    .loading-wrapper .loading-wrap .icon-loading {
+      fill: #333; }
+    .loading-wrapper .loading-wrap p {
+      position: relative;
+      left: -5px;
+      color: #333; }
+      .loading-wrapper .loading-wrap p::after {
+        position: absolute;
+        content: "...";
+        left: 72px;
+        bottom: -4px;
+        color: #333;
+        font-size: 24px; }
+
+.loading-wrapper.loading-show {
+  animation-name: loadingBg;
+  animation-duration: 0.3s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  -webkit-animation-name: loadingBg;
+  -webkit-animation-duration: 0.2s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-fill-mode: forwards; }
+  .loading-wrapper.loading-show .loading-wrap {
+    animation-name: loadingModal;
+    animation-duration: 0.3s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    -webkit-animation-name: loadingModal;
+    -webkit-animation-duration: 0.3s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-fill-mode: forwards; }
+    .loading-wrapper.loading-show .loading-wrap .icon-loading {
+      animation-name: loading;
+      animation-duration: 2s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+      animation-fill-mode: initial;
+      -webkit-animation-name: loading;
+      -webkit-animation-duration: 2s;
+      -webkit-animation-timing-function: linear;
+      -webkit-animation-iteration-count: infinite;
+      -webkit-animation-fill-mode: initial; }
+    .loading-wrapper.loading-show .loading-wrap p::after {
+      animation-name: loadingDot;
+      animation-duration: 1s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+      animation-fill-mode: initial;
+      -webkit-animation-name: loadingDot;
+      -webkit-animation-duration: 1s;
+      -webkit-animation-timing-function: linear;
+      -webkit-animation-iteration-count: infinite;
+      -webkit-animation-fill-mode: initial; }
+
 html, body {
   background-color: #f5f6fa; }
 
@@ -484,8 +625,17 @@ html, body {
   width: 40%;
   height: auto;
   text-align: center;
-  z-index: 999; }
+  z-index: 1100; }
   #browserWrapper .blue-browser-update {
     margin-top: 15px;
     text-align: center;
-    font-size: 18px; }
+    font-size: 18px;
+    color: #fff; }
+
+#canvas {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1099; }

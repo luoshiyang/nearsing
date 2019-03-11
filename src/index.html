@@ -112,7 +112,7 @@
                             <button type="button" class="btn btn-default">管床</button>
                             <button type="button" class="btn btn-default">已出院</button>
                         </div>
-                        <button type="button" class="btn btn-primary blue-btn">
+                        <button type="button" onclick="reload();" class="btn btn-primary blue-btn">
                                 <span class="glyphicon glyphicon-repeat blue-padded-r-10"></span>
                                 刷新
                         </button>
@@ -498,11 +498,12 @@
 <!-- <script type="text/javascript" src="./js/jquery.3.3.1.js"></script> -->
 <script type="text/javascript" src="./js/jquery.1.10.2.js"></script>
 <script type="text/javascript" src="./js/bootstrap.js"></script>
+<!-- <script type="text/javascript" src="./js/lib/update-browser.js"></script> -->
+<script type="text/javascript" src="../js/lib/loading.js"></script>
 <script type="text/javascript" src="./js/collapse.js"></script>
 <script type="text/javascript" src="./js/lib/main.js"></script>
 <script type="text/javascript" src="./js/lib/drop.js"></script>
 <script type="text/javascript" src="./js/lib/modal.js"></script>
-<script type="text/javascript" src="./js/lib/demo.js"></script>
 <script type="text/javascript">
     var navMoreOpt = {
             el: 'navMore',
@@ -615,6 +616,10 @@
                 btnGroup[index].classList.add('active');
             });
         })(thisI);
+    }
+
+    function reload(){
+        $loading.init();
     }
 
     // (function(startDay,endDay){

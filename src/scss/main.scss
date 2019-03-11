@@ -3,6 +3,8 @@
 @import './base-mixin.scss';
 @import './index.scss';
 @import './iconfont.scss';
+//loading加载遮罩层
+@import './loading.scss';
 
 html,body{
     background-color: $pageBg;
@@ -94,6 +96,7 @@ html,body{
 .inline-text{
     display: inline-block;
 }
+
 //浏览器版本不兼容时，弹出层样式
 #browserWrapper{
     position: absolute;
@@ -103,10 +106,20 @@ html,body{
     width: 40%;
     height: auto;
     text-align: center;
-    z-index: 999;
+    z-index: 1100;
     .blue-browser-update{
         margin-top: 15px;
         text-align: center;
         font-size: 18px;
+        color: #fff;
     }
+}
+
+#canvas{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1099;
 }

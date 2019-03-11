@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="renderer" content="webkit">
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <title>弹出框</title>
+    <style>
+        .wrapper{
+            display: inline-block;
+            margin-top: 200px;
+        }
+    </style>
+</head>
+<body style="text-align:center">
+    <div class="wrapper">
+            <button type="button" id="myPopover" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="left" data-trigger="focus" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+            Popover on 左侧
+            </button>
+            
+            <button type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="top" data-trigger="focus" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+            Popover on 顶部
+            </button>
+            
+            <button type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="bottom" data-trigger="focus" data-content="Vivamus
+            sagittis lacus vel augue laoreet rutrum faucibus.">
+            Popover on 底部
+            </button>
+            
+            <button type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="right" data-trigger="focus" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+            Popover on 右侧
+            </button>
+    </div>
+</body>
+<script type="text/javascript" src="../js/jquery.1.10.2.js"></script>
+<script type="text/javascript" src="../js/bootstrap.js"></script>
+<script type="text/javascript" src="../js/lib/popover.js"></script>
+<script type="text/javascript">
+    $(function () {
+        //文档链接https://v3.bootcss.com/javascript/#popovers
+        
+        //手动初始化
+        $('[data-toggle="popover"]').popover();
+        
+        $('#myPopover').on('hidden.bs.popover', function () {
+            // do something…
+            console.log('隐藏popover回调');
+        })
+    })
+</script>
+</html>

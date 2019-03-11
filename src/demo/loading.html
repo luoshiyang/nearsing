@@ -7,11 +7,15 @@
     <meta name="renderer" content="webkit">
     <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="../css/main.css">
-    <title>浏览器兼容</title>
+    <title>loading</title>
 </head>
 <body>
+    <button class="btn btn-primary" onclick="go()">点击我</button>
 </body>
-<script type="text/javascript" src="../js/lib/update-browser.js"></script>
+<script type="text/javascript" src="../js/lib/loading.js"></script>
 <script type="text/javascript">
+    function go(){
+        $loading.init();
+    }
 </script>
 </html>
