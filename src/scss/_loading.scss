@@ -4,7 +4,7 @@
         background: rgba($color: #000000, $alpha: 0);
     }
     100%{
-        background: rgba($color: #000000, $alpha: 0.6);
+        background: rgba($color: #000000, $alpha: 0.5);
     }
 }
 @-webkit-keyframes loadingBg {
@@ -12,7 +12,7 @@
         background: rgba($color: #000000, $alpha: 0);
     }
     100%{
-        background: rgba($color: #000000, $alpha: 0.6);
+        background: rgba($color: #000000, $alpha: 0.5);
     }
 }
 @keyframes loading {
