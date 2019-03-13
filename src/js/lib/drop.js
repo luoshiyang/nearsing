@@ -2,6 +2,7 @@
     var drop = function(options,callback){
         this.options = {};
         this.options.el = 'dropdwon';
+        this.options.select = false;
         if(callback && typeof callback === 'function'){
             this.callback = callback;
         }
@@ -33,6 +34,7 @@
             var tag = document.getElementById(self.options.el);
             var wrapper = tag.getElementsByClassName('dropdown-menu')[0];
             var listArr = self.options.list;
+            this.tag = tag;
             // wrapper.classList = 'dropdown-menu';
             // tag.appendChild(wrapper);
             for(var i = 0; i < listArr.length; i++){
@@ -50,12 +52,20 @@
                 wrapper.appendChild(item);
                 (function(index){
                     item.addEventListener('click',function(){
-                        console.log(self);
                         if(self.callback && typeof self.callback === 'function'){
-                            self.callback(index);
+                            self.select(listArr[index]);
+                            self.callback(listArr[index]);
                         }
                     });
                 })(i);
+            }
+        },
+        select: function(val){
+            var self = this;
+            var select = self.options.select;
+            var selectHeader = self.tag.getElementsByClassName('select-val')[0];
+            if(select === true){
+                selectHeader.innerHTML = val.name;
             }
         }
     }

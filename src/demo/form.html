@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="renderer" content="webkit">
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <title>表单</title>
+</head>
+<body>
+    <section class="container-fluid blue-padded-t-15 blue-padded-b-15">
+        <form>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Email address</label>
+                <!--表单空间中class被赋予了form-control样式，会继承boostrap关于表单类的全局样式，宽度100%-->
+                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+            </div>
+        </form>
+        <h4 class="blue-padded-t-15">内联表单</h4>
+        <form class="form-inline">
+            <div class="form-group">
+                <label for="exampleInputEmail1">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+            </div> 
+            <div class="form-group">
+                <label for="exampleInputEmail1">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email" disabled>
+            </div> 
+        </form>
+        <h4 class="blue-padded-t-15">全部禁用状态</h4>
+        <!--fieldset标签内添加 disabled-->
+        <form>
+            <fieldset disabled>
+                <div class="form-group">
+                    <label for="disabledTextInput">Disabled input</label>
+                    <input type="text" id="disabledTextInput" class="form-control" placeholder="Disabled input">
+                </div>
+                <div class="form-group">
+                    <label for="disabledSelect">Disabled select menu</label>
+                    <select id="disabledSelect" class="form-control">
+                        <option>Disabled select</option>
+                        <option>Disabled select</option>
+                        <option>Disabled select</option>
+                        <option>Disabled select</option>
+                        <option>Disabled select</option>
+                    </select>
+                </div>
+                <div class="checkbox">
+                    <label>
+                    <input type="checkbox"> Can't check this
+                    </label>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </fieldset>
+        </form>
+        <h4 class="blue-padded-t-15">只读状态</h4>
+        <form>
+            <div class="form-group">
+                <label for="disabledTextInput">readonly input</label>
+                <input type="text" id="disabledTextInput" class="form-control" placeholder="Readonly input" readonly>
+            </div>
+        </form>
+        <h4 class="blue-padded-t-15">校验状态</h4>
+        <form>
+            <h5 class="text-success">成功</h5>
+            <div class="form-group has-success">
+                <label for="disabledTextInput">readonly input</label>
+                <input type="text" id="disabledTextInput" class="form-control" placeholder="Readonly input">
+            </div>
+            <h5 class="text-warning">警告</h5>
+            <div class="form-group has-warning">
+                <label for="disabledTextInput">readonly input</label>
+                <input type="text" id="disabledTextInput" class="form-control" placeholder="Readonly input">
+            </div>
+            <h5 class="text-danger">错误</h5>
+            <div class="form-group has-error">
+                <label for="disabledTextInput">readonly input</label>
+                <input type="text" id="disabledTextInput" class="form-control" placeholder="Readonly input">
+            </div>
+        </form>
+        <h4 class="blue-padded-t-15">多选</h4>
+        <form class="form-inline">
+            <div class="checkbox">
+                <label for="weight">
+                    <input type="checkbox" id="weight" checked>
+                    体重
+                </label>
+            </div>
+            <div class="checkbox">
+                <label for="height">
+                    <input type="checkbox" id="height">
+                    身高
+                </label>
+            </div>
+            <div class="checkbox">
+                <label for="blood">
+                    <input type="checkbox" id="blood">
+                    血糖
+                </label>
+            </div>
+            <div class="checkbox">
+                <label for="xx">
+                    <input type="checkbox" id="xx" disabled>
+                    禁用
+                </label>
+            </div>
+            <div class="checkbox">
+                <label for="xxx">
+                    <input type="checkbox" id="xxx" disabled>
+                    禁用
+                </label>
+            </div>
+        </form>
+        <h4 class="blue-padded-t-15">单选</h4>
+        <form class="form-inline">
+            <div class="radio">
+                <label for="man">
+                    <input type="radio" name="sex" id="man" checked>
+                    男
+                </label>
+            </div>
+            <div class="radio">
+                <label for="female">
+                    <input type="radio" name="sex" id="female">
+                    女
+                </label>
+            </div>
+        </form>
+        <h4 class="blue-padded-t-15">select选择器</h4>
+        <form class="form-inline">
+            <div class="form-group">
+                <label for="selectWrapper">Email address</label>
+                <div class="dropdown form-group" id="selectWrapper">
+                    <button class="btn btn-default btn-select" data-target="#selectWrapper" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span class="select-val blue-padded-r-15">请选择</span>
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu"></ul>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="selectWrapper">Email address</label>
+                <div class="dropdown form-group" id="selectWrapper">
+                    <!--button为disable状态，需要设置disabled和class btn-disabled  才能生效-->
+                    <button disabled class="btn btn-default btn-select btn-disabled" data-target="#selectWrapper" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span class="select-val blue-padded-r-15">请选择</span>
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu"></ul>
+                </div>
+            </div>
+        </form>
+    </section>
+</body>
+<script type="text/javascript" src="../js/jquery.1.10.2.js"></script>
+<script type="text/javascript" src="../js/bootstrap.js"></script>
+<script type="text/javascript" src="../js/lib/drop.js"></script>
+<script type="text/javascript">
+    new Drop({
+        el:'selectWrapper',
+        select: true,
+        list:[{
+            name: 'selector item 01',
+            underLine: false
+        },{
+            name: 'selector item 02',
+            underLine: false
+        },{
+            name: 'selector item 03',
+            underLine: false
+        },{
+            name: 'selector item 04',
+            underLine: false
+        },{
+            name: 'selector item 05',
+            underLine: false
+        }]
+    },function(data){
+        console.log(data);
+    });
+</script>
+</html>

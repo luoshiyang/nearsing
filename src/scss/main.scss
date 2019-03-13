@@ -5,16 +5,17 @@
 @import './iconfont.scss';
 //loading加载遮罩层
 @import './loading.scss';
+//button样式
+@import './button.scss';
+//form表单样式
+@import './form.scss';
+//分页样式
+@import './pagination.scss';
+//提示框样式
+@import './alert.scss';
 
 html,body{
     background-color: $pageBg;
-}
-
-//移除所有按钮focus状态的边框
-.btn{
-    &:focus,&:active:focus,.active:focus,.focus,&:active.focus,.active.focus{
-        outline: none; 
-    }
 }
 
 .blue-content{

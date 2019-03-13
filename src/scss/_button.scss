@@ -1,0 +1,50 @@
+.btn{
+    //移除所有按钮focus状态的边框
+    &:focus,&:active:focus,&.active:focus,&.focus,&:active.focus,&.active{
+        outline: none; 
+    }
+    min-width: 90px;
+    &.btn-normal{
+        background-color: $button-normal;
+        border: 1px solid $button-normal-border;
+        color: #fff;
+        &:hover{
+            background-color: $button-hover;
+        }
+        &:active,&.active{
+            background-color: $button-active;
+        }
+        &.btn-disabled{
+            // pointer-events: none;
+            background-color: $button-normal;
+            &:hover{
+                background-color: $button-normal;
+            }
+            &:active{
+                background-color: $button-normal;
+            }
+        }
+    }
+    //作为选择器为使用场景
+    &.btn-select{
+        min-width: 120px;
+        @include blue-box-content(between,middle,row);
+    }
+    &.btn-default{
+        &:hover{
+            background-color: #E8F2FF;
+            color: #3B87FF;
+        }
+        &.btn-disabled{
+            // pointer-events: none;
+            background-color: #fff;
+            &:hover{
+                background-color: #fff;
+                color: #333;
+            }
+            &:active{
+                background-color: #fff;
+            }
+        }
+    }
+}

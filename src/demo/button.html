@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="renderer" content="webkit">
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <title>按钮样式</title>
+</head>
+<body>
+    <section class="container-fluid">
+        <h5>基本按钮</h5>
+        <div>
+            <button class="btn btn-normal">确定</button>
+            <button class="btn btn-primary">确定</button>
+            <button class="btn btn-success">确定</button>
+            <button class="btn btn-warning">确定</button>
+            <button class="btn btn-danger">确定</button>
+            <button class="btn btn-info">确定</button>
+            <button class="btn btn-default">确定</button>
+        </div>
+        <h5>禁用按钮</h5>
+        <div>
+            <!--button为disable状态，需要设置disabled和class btn-disabled  才能生效-->
+            <button class="btn btn-normal btn-disabled" disabled="disabled">确定</button>
+            <button class="btn btn-primary" disabled="disabled">确定</button>
+            <button class="btn btn-success" disabled="disabled">确定</button>
+            <button class="btn btn-warning" disabled="disabled">确定</button>
+            <button class="btn btn-danger" disabled="disabled">确定</button>
+            <button class="btn btn-info" disabled="disabled">确定</button>
+            <!--button为disable状态，需要设置disabled和class btn-disabled  才能生效-->
+            <button class="btn btn-default btn-disabled" disabled="disabled">确定</button>
+        </div>
+        <h5>按钮组</h5>
+        <div>
+            <div class="btn-group" role="group">
+                <button type="button" class="btn btn-default active">全科</button>
+                <button type="button" class="btn btn-default">管床</button>
+                <button type="button" class="btn btn-default">已出院</button>
+            </div>
+            <div class="btn-group" role="group">
+                <button type="button" class="btn btn-normal active">全科</button>
+                <button type="button" class="btn btn-normal">管床</button>
+                <button type="button" class="btn btn-normal">已出院</button>
+            </div>
+            <div class="btn-group" role="group">
+                <button type="button" class="btn btn-normal">全科</button>
+                <button type="button" class="btn btn-default">管床</button>
+                <button type="button" class="btn btn-default">已出院</button>
+            </div>
+        </div>
+    </section>
+</body>
+<script type="text/javascript">
+</script>
+</html>
