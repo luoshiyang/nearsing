@@ -3,8 +3,8 @@
 	<head>
 		<meta charset="utf-8">
 		<title>提示框</title>
-		<link rel="stylesheet" type="text/css" href="./css/bootstrap.css">
-		<link rel="stylesheet" type="text/css" href="./css/main.css">
+		<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="../css/main.css">
 		<style>
 			.alert{
 				width: 400px;
@@ -29,16 +29,16 @@
 		<button class="btn btn-default center">成功</button>
 	</body>
 </html>
-<script type="text/javascript" src="./js/jquery.1.10.2.js"></script>
-<script type="text/javascript" src="./js/bootstrap.js"></script>
-<script type="text/javascript" src="./js/lib/alert.js"></script>
+<script type="text/javascript" src="../js/jquery.1.10.2.js"></script>
+<script type="text/javascript" src="../js/bootstrap.js"></script>
+<script type="text/javascript" src="../js/lib/alert.js"></script>
 <script>
 	$(function(){
 		// $(".left").click(function(){
 		// 	$.danger("危险：","asdasd","center",2000);
 		// })
 		$(".center").click(function(){
-			$.alert.show({
+			$alert.show({
 				type: "success",
 				text: "操作成功",
 				positions: "center",
@@ -46,7 +46,7 @@
 			});
 		});
 		$(".left").click(function(){
-			$.alert.show({
+			$alert.show({
 				type: "error",
 				text: "操作失败",
 				positions: "center",

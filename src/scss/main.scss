@@ -13,6 +13,12 @@
 @import './pagination.scss';
 //提示框样式
 @import './alert.scss';
+//日历
+@import './calendar.scss';
+//树状控件
+@import './tree.scss';
+//tab切换
+@import './tab.scss';
 
 html,body{
     background-color: $pageBg;

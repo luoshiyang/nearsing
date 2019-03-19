@@ -1,26 +1,26 @@
-.pagination-wrapper{
-    min-width: 200px;
-    height: auto;
-    overflow: hidden;
-    .pagination-wrap{
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        font-size: 0;
-        @include blue-box-content(center,middle,row);
-        .page-item{
-            width: 32px;
-            height: 32px;
-            background-color: #fff;
-            border-radius: 50%;
+.blue-pagination{
+    @include blue-box-content(left,middle,row);
+    .pagination > li{
+        &.active a{
+            background-color: #2273F2;
+            color: #fff;
+            border-radius: 4px;
+        }
+        a{
             margin: 0 5px;
-            font-size: 16px;
-            text-align: center;
-            line-height: 32px;
-            &.active{
-                background-color: $button-normal;
-                color: #fff;
-            }
+            border: none;
+            background-color: transparent;
+        }
+    }
+    .page-count{
+        .form-group{
+            margin-bottom: 0;
+        }
+        margin-left: 15px;
+        input{
+            display: inline-block;
+            width: 50px;
+            margin: 0 5px;
         }
     }
 }

@@ -1,0 +1,47 @@
+.nav{
+    &.nav-tabs.normal-tabs{
+        background-color: #fff;
+        a{
+            color: $gray-black-color;
+        }
+        li{
+            a:hover{
+                color: #3291FF;
+            }
+        }
+        li.active{
+            a{
+                color: #3291FF;
+            }
+        }
+    }
+    &.nav-tabs.border-tabs{
+        background-color: #fff;
+        a{
+            color: $gray-black-color;
+            position: relative;
+        }
+        li{
+            a:hover{
+                color: #3291FF;
+            }
+        }
+        li.active{
+            a{
+                color: #3291FF;
+                border:none;
+                border-bottom-color: #ddd;
+                &::before{
+                    position: absolute;
+                    bottom:0;
+                    left: 15%;
+                    right: 15%;
+                    width: auto;
+                    height: 2px;
+                    background-color: #3291FF;
+                    content: "";
+                }
+            }
+        }
+    }
+}

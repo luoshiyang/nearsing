@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="renderer" content="webkit">
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <title>树状菜单</title>
+</head>
+<body>
+    <!--必须特性data-toggle="collapse" button按钮使用data-target="collapseOne"或者a标签使用href="#collapseOne" aria-expanded默认是否展开-->
+    <!--https://v3.bootcss.com/javascript/#collapse-->
+    <div class="panel-group tree-menu" id="treeWrap" role="tablist" aria-multiselectable="true"></div>
+    <div class="panel-group tree-menu" id="treeWrapsss" role="tablist" aria-multiselectable="true"></div>
+</body>
+<script type="text/javascript" src="../js/jquery.1.10.2.js"></script>
+<script type="text/javascript" src="../js/bootstrap.js"></script>
+<script type="text/javascript" src="../js/lib/collapse.js"></script>
+<script type="text/javascript" src="../js/lib/tree-menu.js"></script>
+<script type="text/javascript">
+var mockdata = [
+            {
+                name: '4床 | 马舒扬',
+                id: 'one',
+                listArr:['体温单','出入量统计']
+            },{
+                name: '5床 | 冯庆峰',
+                id: 'two',
+                listArr:['体温单','出入量统计','疼痛评估单','入院评估单']
+            },{
+                name: '6床 | 张志芳',
+                id: 'three',
+                listArr:['体温单','出入量统计','疼痛评估单','入院评估单']
+            },{
+                name: '4床 | 马舒扬',
+                id: 'fuor',
+                listArr:['体温单','出入量统计','疼痛评估单','入院评估单']
+            },{
+                name: '5床 | 冯庆峰',
+                id: 'five',
+                listArr:['体温单','出入量统计','入院评估单']
+            }
+        ]
+        $tree.init({
+            el: 'treeWrap',
+            data:mockdata
+        });
+        $tree.init({
+            el: 'treeWrapsss',
+            data:mockdata
+        });
+//     function appendAfter(node, newNode)    //后插入函数 
+//    {  
+//       if(node.parentNode)    //如果存在双亲结点 
+//       { 
+//          if(node.nextSibling)  //如果存在下一子结点 
+//          { 
+//               //前插入子结点 
+//             node.parentNode.insertBefore(newNode, node.nextSibling); 
+//          }else  //如果没有下一子结点 
+//              //后追加子结点 
+//          node.parentNode.appendChild(newNode); 
+//       } 
+//    } 
+</script>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="renderer" content="webkit">
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <title>tab切换标签</title>
+</head>
+<body>
+    <div>
+
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs normal-tabs" role="tablist">
+            <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Home</a></li>
+            <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Profile</a></li>
+            <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Messages</a></li>
+            <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Settings</a></li>
+        </ul>
+
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <div role="tabpanel" class="tab-pane active" id="home">home</div>
+            <div role="tabpanel" class="tab-pane" id="profile">profile</div>
+            <div role="tabpanel" class="tab-pane" id="messages">messages</div>
+            <div role="tabpanel" class="tab-pane" id="settings">settings</div>
+        </div>
+
+         <!-- Nav tabs -->
+         <ul class="nav nav-tabs border-tabs" role="tablist">
+            <li role="presentation" class="active"><a href="#assessment" aria-controls="assessment" role="tab" data-toggle="tab">入院评估</a></li>
+            <li role="presentation"><a href="#record" aria-controls="record" role="tab" data-toggle="tab">护理记录</a></li>
+            <li role="presentation"><a href="#member" aria-controls="member" role="tab" data-toggle="tab">人员管理</a></li>
+            <li role="presentation"><a href="#authority" aria-controls="authority" role="tab" data-toggle="tab">权限设置</a></li>
+        </ul>
+
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <div role="tabpanel" class="tab-pane active" id="assessment">入院评估</div>
+            <div role="tabpanel" class="tab-pane" id="record">护理记录</div>
+            <div role="tabpanel" class="tab-pane" id="member">人员管理</div>
+            <div role="tabpanel" class="tab-pane" id="authority">权限设置</div>
+        </div>
+    
+    </div>
+</body>
+<!--提前加载jquery库-->
+<script type="text/javascript" src="../js/jquery.1.10.2.js"></script>
+<!--加载boostrap库，依赖于jquery库-->
+<script type="text/javascript" src="../js/bootstrap.js"></script>
+<script type="text/javascript" src="../js/lib/tab.js"></script>
+<script type="text/javascript">
+</script>
+</html>

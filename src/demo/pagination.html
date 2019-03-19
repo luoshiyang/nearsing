@@ -10,25 +10,49 @@
     <title>分页</title>
 </head>
 <body>
-    <section class="container-fluid">
-        <div class="pagination-wrapper">
-            <ul class="pagination-wrap">
-                <li class="page-item active">1</li>
-                <li class="page-item">1</li>
-                <li class="page-item">1</li>
-                <li class="page-item">1</li>
-                <li class="page-item">1</li>
-                <li class="page-item">1</li>
-                <li class="page-item">1</li>
-                <li class="page-item">1</li>
-                <li class="page-item">1</li>
-                <li class="page-item">1</li>
-                <li class="page-item">1</li>
+    <div id="bluePagination">
+        <!-- <nav aria-label="Page navigation" class="blue-pagination">
+            <ul class="pagination">
+                <li>
+                <a href="#" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                </a>
+                </li>
+                <li class="active"><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li>
+                <a href="#" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                </a>
+                </li>
             </ul>
-        </div>
-    </section>
+            <form class="form-inline page-count">
+                <div class="form-group">
+                    <label for="exampleInputEmail1">共12页,前往</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Go">
+                    <label>页</label>
+                </div>
+            </form>
+        </nav> -->
+    </div>
 </body>
+<!--提前加载jquery库-->
+<script type="text/javascript" src="../js/jquery.1.10.2.js"></script>
+<!--加载boostrap库，依赖于jquery库-->
+<script type="text/javascript" src="../js/bootstrap.js"></script>
+<!--加载弹出状态栏库，依赖于boostrap库-->
+<script type="text/javascript" src="../js/lib/alert.js"></script>
+<!--加载分页栏库，依赖于boostrap库-->
 <script type="text/javascript" src="../js/lib/pagination.js"></script>
 <script type="text/javascript">
+    $pagination.init({
+        el: 'bluePagination',
+        count: 19
+    },function(index){
+        console.log('当前请求页面'+index);
+    });
 </script>
 </html>

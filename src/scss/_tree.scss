@@ -1,0 +1,38 @@
+.tree-menu{
+    .panel{
+        margin-top: 0;
+        border-color: #fff;
+        .panel-heading{
+            background-color: #fff;
+            a{
+                font-size: 14px;
+                font-weight: normal;
+                text-decoration: none;
+            }
+            &:hover{
+                background-color: #EFF3FC;
+                color: #3291FF;
+            }
+            &.active{
+                background-color: #EFF3FC;
+                a{
+                    color: #3291FF;
+                }
+            }
+        }
+    }
+    .panel-collapse{
+        ul{
+            border-top: #fff;
+            li{
+                padding-left: 30px;
+                border: none;
+                cursor: pointer;
+                &:hover{
+                    background-color: #EFF3FC;
+                    color: #3291FF;
+                }
+            }
+        }
+    }
+}
