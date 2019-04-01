@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<HTML>
+ <head>
+  <TITLE> ZTREE DEMO </TITLE>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <link rel="stylesheet" href="../css/bootstrap.css" type="text/css">
+  <link rel="stylesheet" href="../css/zTreeStyle.css" type="text/css">
+  <style type="text/css">
+    .wrapper{
+        width: 100%;
+        overflow: hidden;
+    }
+    .ztree li span.button{
+        display: none;
+    }
+    .ztree li a{
+        padding: 8px 3px 24px 10px;
+        display: block;
+    }
+    .ztree li a.curSelectedNode{
+        padding-top: 8px;
+    }
+    .ztree li span.button{
+        background-image: none;
+    }
+</style>
+ </head>
+<body>
+    <section class="wrapper">
+        <ul id="treeDemo" class="ztree"></ul>
+    </section>
+</body>
+<script type="text/javascript" src="../js/jquery.1.10.2.js"></script>
+<script type="text/javascript" src="../js/lib/jquery.ztree.core.js"></script>
+<script type="text/JavaScript">
+ // zTree 的参数配置，深入使用请参考 API 文档（setting 配置详解）
+ var setting = {
+     view: {
+        dblClickExpand: false,
+        showLine: false,
+        selectedMulti: false,
+        showIcon: true
+     },
+     data: {
+         key: {
+             children: 'listArr',
+             name: 'name'
+         }
+     },
+     callback: {
+         beforeClick: function (treeId,treeNode){
+             var zTreeObj = $.fn.zTree.getZTreeObj('treeDemo');
+             if (treeNode.isParent) {
+                zTreeObj.expandNode(treeNode);
+             }
+         }
+     }
+ };
+ // zTree 的数据属性，深入使用请参考 API 文档（zTreeNode 节点数据详解）
+ var zNodes = [
+            {
+                name: '4床 | 马舒扬',
+                open: true,
+                id: 1,
+                listArr:[{
+                    name: '体温单'
+                },{
+                    name: '出入量统计'
+                }]
+            },{
+                name: '5床 | 冯庆峰',
+                open: true,
+                id: 2,
+                listArr:[{
+                    name: '体温单',
+                    open: true,
+                    id:21,
+                    listArr: [{
+                        name: '111'
+                    },{
+                        name: '111'
+                    },{
+                        name: '111'
+                    }]
+                },{
+                    name: '出入量统计'
+                },{
+                    name: '疼痛评估单'
+                },{
+                    name: '入院评估单'
+                }]
+            },{
+                name: '6床 | 张志芳',
+                open: false,
+                id: 3,
+                listArr:[{
+                    name: '体温单'
+                },{
+                    name: '出入量统计'
+                },{
+                    name: '疼痛评估单'
+                },{
+                    name: '入院评估单'
+                }]
+            },{
+                name: '4床 | 马舒扬',
+                open: false,
+                id: 4,
+                listArr:[{
+                    name: '体温单'
+                },{
+                    name: '出入量统计'
+                },{
+                    name: '疼痛评估单'
+                },{
+                    name: '入院评估单'
+                }]
+            },{
+                name: '5床 | 冯庆峰',
+                open: false,
+                id: 5,
+                listArr:[{
+                    name: '体温单'
+                },{
+                    name: '出入量统计'
+                },{
+                    name: '入院评估单'
+                }]
+            }
+        ];
+ $(document).ready(function(){
+    $.fn.zTree.init($("#treeDemo"), setting, zNodes);
+ });
+</script>
+</HTML>

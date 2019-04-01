@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="renderer" content="webkit">
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <link rel="stylesheet" href="../css/zTreeStyle.css" type="text/css">
+    <title>可拖动窗口菜单</title>
+    <style type="text/css">
+        .drag-wrapper{
+            display: flex;
+            display: -webkit-flex;
+            display: -moz-flex;
+            display: -mz-flex;
+            flex-direction: row;
+            -webkit-flex-direction: row;
+            -moz-flex-direction: row;
+            -mz-flex-direction: row;
+            justify-content: flex-start;
+            -webkit-justify-content: flex-start;
+            -moz-justify-content: flex-start;
+            -mz-justify-content: flex-start;
+            width: 100%;
+            height: 100vh;
+        }
+        .drag-wrapper-left{
+            width: 20%;
+            background-color:aqua;
+            height: inherit;
+        }
+        .drag-wrapper-right{
+            width: 0;
+            flex:1;
+            -webkit-flex:1;
+            -moz-flex:1;
+            -mz-flex:1;
+            background-color: wheat;
+            height: inherit;
+        }
+
+
+        .wrapper{
+            width: 100%;
+            overflow: hidden;
+        }
+        .ztree li span.button{
+            display: none;
+        }
+        .ztree li a{
+            padding: 8px 3px 24px 10px;
+            display: block;
+        }
+        .ztree li a.curSelectedNode{
+            padding-top: 8px;
+        }
+        .ztree li span.button{
+            background-image: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="drag-wrapper" id="dragWrapper">
+        <div class="drag-wrapper-left" id="dragWrapperLeft">
+                <ul id="treeDemo" class="ztree"></ul>
+        </div>
+        <div class="drag-wrapper-right" id="dragWrapperRight"></div>
+    </div>
+</body>
+<script type="text/javascript" src="../js/jquery.1.10.2.js"></script>
+<script type="text/javascript" src="../js/lib/jquery.ztree.core.js"></script>
+<script type="text/javascript">
+    var tag = document.getElementById('dragWrapperLeft');
+    var otherTag = document.getElementById('dragWrapperRight');
+    var draggle = false;
+    var tagW = tag.offsetWidth;
+    var currentWidth;
+    var mouseDownFunc = function(e){
+        draggle = true;
+        currentWidth = e.clientX;
+        tag.addEventListener('mousemove',mouseMoveFunc);
+    }
+    var mouseUpFunc = function(){
+        draggle = false;
+        tagW = tag.offsetWidth;
+        tag.removeEventListener('mousemove',mouseMoveFunc);
+    }
+    var mouseMoveFunc = function(e){
+        if(draggle){
+            tag.style.width = tagW + (e.clientX - currentWidth) +'px';
+            console.log(e.clientX - currentWidth);
+        }
+    }
+    tag.addEventListener('mousedown',mouseDownFunc);
+    tag.addEventListener('mouseup',mouseUpFunc);
+    otherTag.addEventListener('mousemove',mouseUpFunc);
+
+    // zTree 的参数配置，深入使用请参考 API 文档（setting 配置详解）
+    var setting = {
+        view: {
+            dblClickExpand: false,
+            showLine: false,
+            selectedMulti: false,
+            showIcon: true
+        },
+        data: {
+            key: {
+                children: 'listArr',
+                name: 'name'
+            }
+        },
+        callback: {
+            beforeClick: function (treeId,treeNode){
+                var zTreeObj = $.fn.zTree.getZTreeObj('treeDemo');
+                if (treeNode.isParent) {
+                    zTreeObj.expandNode(treeNode);
+                }
+            }
+        }
+    };
+    // zTree 的数据属性，深入使用请参考 API 文档（zTreeNode 节点数据详解）
+    var zNodes = [
+                {
+                    name: '4床 | 马舒扬',
+                    open: true,
+                    id: 1,
+                    listArr:[{
+                        name: '体温单'
+                    },{
+                        name: '出入量统计'
+                    }]
+                },{
+                    name: '5床 | 冯庆峰',
+                    open: true,
+                    id: 2,
+                    listArr:[{
+                        name: '体温单',
+                        open: true,
+                        id:21,
+                        listArr: [{
+                            name: '111'
+                        },{
+                            name: '111'
+                        },{
+                            name: '111'
+                        }]
+                    },{
+                        name: '出入量统计'
+                    },{
+                        name: '疼痛评估单'
+                    },{
+                        name: '入院评估单'
+                    }]
+                },{
+                    name: '6床 | 张志芳',
+                    open: false,
+                    id: 3,
+                    listArr:[{
+                        name: '体温单'
+                    },{
+                        name: '出入量统计'
+                    },{
+                        name: '疼痛评估单'
+                    },{
+                        name: '入院评估单'
+                    }]
+                },{
+                    name: '4床 | 马舒扬',
+                    open: false,
+                    id: 4,
+                    listArr:[{
+                        name: '体温单'
+                    },{
+                        name: '出入量统计'
+                    },{
+                        name: '疼痛评估单'
+                    },{
+                        name: '入院评估单'
+                    }]
+                },{
+                    name: '5床 | 冯庆峰',
+                    open: false,
+                    id: 5,
+                    listArr:[{
+                        name: '体温单'
+                    },{
+                        name: '出入量统计'
+                    },{
+                        name: '入院评估单'
+                    }]
+                }
+            ];
+    $(document).ready(function(){
+        $.fn.zTree.init($("#treeDemo"), setting, zNodes);
+    });
+</script>
+</html>

@@ -61,38 +61,50 @@
 @mixin blue-box-content($horizontal,$vertical,$direction) {
     display: flex;
     display: -webkit-flex;
+    display: -moz-flex;
+    display: -mz-flexbox;
     @if $direction == column {
         flex-direction: column;
         -webkit-flex-direction: column;
+        -moz-box-orient: vertical;
     } @else if $direction == row {
         flex-direction: row;
         -webkit-flex-direction: row;
+        -moz-box-orient: horizontal;
     }
     @if $horizontal == left {
         justify-content: flex-start;
         -webkit-justify-content: flex-start;
+        -moz-justify-content: flex-start;
     } @else if $horizontal == center {
         justify-content: center;
         -webkit-justify-content: center;
+        -moz-justify-content: center;
     } @else if $horizontal == between {
         justify-content: space-between;
         -webkit-justify-content: space-between;
+        -moz-justify-content: space-between;
     } @else if $horizontal == around {
         justify-content: space-around;
         -webkit-justify-content: space-around;
+        -moz-justify-content: space-around;
     } @else if $horizontal == right {
         justify-content: flex-end;
         -webkit-justify-content: flex-end;
+        -moz-justify-content: flex-end;
     }
     @if $vertical == top {
         align-items: flex-start;
         -webkit-align-items: flex-start;
+        -moz-align-items: flex-start;
     } @else if $vertical == middle {
         align-items: center;
         -webkit-align-items: center;
+        -moz-align-items: center;
     } @else if $vertical == bottom {
         justify-content: flex-end;
         -webkit-justify-content: flex-end;
+        -moz-justify-content: flex-end;
     }
 }
 

@@ -4,6 +4,20 @@
         border-color: #fff;
         .panel-heading{
             background-color: #fff;
+            position: relative;
+            padding-left: 30px;
+            &::before{
+                position: absolute;
+                left: 10px;
+                top: 16px;
+                content: "";
+                width: 0;
+                height: 0;
+                border-top: 8px solid #fff;
+                border-left: 8px solid #B3B7C2;
+                transform: rotate(-135deg);
+                transition: all linear .2s;
+            }
             a{
                 font-size: 14px;
                 font-weight: normal;
@@ -17,6 +31,11 @@
                 background-color: #EFF3FC;
                 a{
                     color: #3291FF;
+                }
+                &::before{
+                    top: 14px;
+                    border-left-color: #2273F2;
+                    transform: rotate(-45deg);
                 }
             }
         }

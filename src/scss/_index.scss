@@ -1,4 +1,4 @@
-
+$screen-height:100vh;
 .nav-blue{
     background-color: $main-color;
     color: $white-color !important;
@@ -48,7 +48,7 @@
     overflow: hidden;
     position: relative;
     margin:0 auto;
-    @include blue-box-content(center,top,column);
+    @include blue-box-content(left,middle,column);
 }
 
 .header-nav {
@@ -74,21 +74,26 @@
 .panel-wrapper{
     position: relative;
     width: 100%;
-    height: 100%;
+    height: 0;
+    flex:1;
+    -webkit-flex:1;
+    -moz-flex:1;
     @include blue-box-content(center,top,row);
     .panel-left{
         width: 0;
         flex:1;
+        height: 100%;
         -webkit-flex:1;
-        padding-right: 15px;
-        height: inherit;
+        margin-right: 15px;
         position: relative;
-        overflow: hidden;
-        @include blue-box-content(start,middle,column);
+        // overflow: hidden;
+        // @include blue-box-content(left,middle,column);
         .left-header{
             @include blue-header(68px);
             @extend .border-top-1px;
             width: 100%;
+            position: relative;
+            z-index: 100;
             .info{
                 @include media-valiable(md);
             }
@@ -98,15 +103,19 @@
             }
         }
         .left-body{
-            overflow-x: hidden;
-            overflow-y: scroll;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding-top: 68px;
+            overflow: scroll;
         }
     }
     .panel-right{
         width: 200px;
-        height: inherit;
+        height: 100%;
         position: relative;
-        overflow: hidden;
         @include blue-box-content(start,middle,column);
         .right-header{
             @include blue-header(45px);
@@ -114,8 +123,7 @@
             width: 198px;
         }
         .patient-info{
-            overflow-x: hidden;
-            overflow-y: scroll;
+            overflow: scroll;
         }
     }
 }
